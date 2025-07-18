@@ -17,4 +17,4 @@ spec:
         image: "quarkus/{{ .Values.app.name }}:{{ .Chart.AppVersion }}"
         imagePullPolicy: Never
         ports:
-        - containerPort: 8081
+        - containerPort: {{ .Values.service.targetPort }}
